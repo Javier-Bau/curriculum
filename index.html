@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Javier Bautista Luis — Sistemas & Seguridad</title>
+
+<style>
+:root {
+  --bg: #0e0e11;
+  --bg-soft: #16161c;
+  --text: #e6e6eb;
+  --muted: #9a9aa3;
+  --accent: #5da9ff;
+  --border: #23232b;
+  --nav-height: 60px; /* Definimos la altura para mayor precisión */
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  height: var(--nav-height);
+  background: rgba(14, 14, 17, 0.8); /* Efecto traslúcido */
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  z-index: 100;
+}
+
+nav a {
+  margin-right: 1.5rem;
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+nav a:hover { color: var(--accent); }
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 2.5rem 1.5rem;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 3rem;
+  align-items: start; /* Ayuda a que los hijos no se estiren */
+}
+
+aside {
+  position: sticky;
+  top: calc(var(--nav-height) + 3rem); /* Se pega justo debajo del nav */
+  align-self: start;
+  height: fit-content;
+  border-right: 1px solid var(--border);
+  padding-right: 1rem;
+}
+
+aside strong {
+  display: block;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.05rem;
+  color: var(--accent);
+}
+
+aside a {
+  display: block;
+  margin-bottom: 0.8rem;
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: transform 0.2s, color 0.2s;
+}
+
+aside a:hover {
+  color: var(--accent);
+  transform: translateX(4px);
+}
+
+main section { padding-top: 4rem;}
+main #titulo { padding-top: 0;}
+h1 { margin: 0 0 0.5rem 0; font-size: 2.2rem; }
+h2 { font-size: 1.4rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; color: var(--accent); }
+p { color: var(--muted); margin: 0.8rem 0; }
+ul { padding-left: 1.2rem; }
+li { margin-bottom: 0.6rem; color: var(--muted); }
+
+footer {
+  max-width: 1000px;
+  margin: 5rem auto 2rem;
+  padding: 2rem 1.5rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.85rem;
+  color: var(--muted);
+  text-align: center;
+}
+
+@media (max-width: 800px) {
+  .container { grid-template-columns: 1fr; gap: 1rem; }
+  aside {
+    display: none;
+  }
+}
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html">Inicio</a>
+  <a href="proyectos.html">Proyectos</a>
+  <a href="#contacto">Contacto</a>
+</nav>
+
+<div class="container">
+
+  <!-- MENU -->
+  <aside>
+    <strong>Contenido</strong>
+    <a href="#estudios">Estudios</a>
+    <a href="#habilidades">Habilidades</a>
+    <a href="#sobre-mi">Sobre mí</a>
+    <a href="#proyectos">Proyectos</a>
+    <a href="#contacto">Contactos</a>
+  </aside>
+
+  <!-- MAIN -->
+  <main>
+    <section id="titulo">
+      <h1>Javier Bautista Luis</h1>
+      <p>Sistemas · Linux · Seguridad · Infraestructura</p>
+    </section>
+
+    <section id="estudios">
+      <h2>Estudios</h2>
+      <ul>
+	<p style="margin-left: -20px; margin-bottom: -3.5px;">Septiembre 2023 - Junio 2026</p>
+        <li><b>Grado en Ingeniería Informática (Rama de ciencias de la computación) - UCM</b></li>
+        <p>Septiembre 2020 - Junio 2022</p>
+        <li>Bachillerato IES Carlos Bousoño</li>
+        <p>Septiembre 2011 - Junio 2022</p>
+        <li><b>Conservatorio Profesional de Música de Majadahonda</b></li>
+      </ul>
+    </section>
+
+    <section id="habilidades">
+      <h2>Habilidades / Conocimientos</h2>
+      <ul>
+        <li>Despliegue de VPS</li>
+        <li>Nginx / Apache</li>
+        <li>Backups y monitoreo</li>
+      </ul>
+    </section>
+
+    <section id="sobre-mi">
+      <h2>Sobre mí</h2>
+      <ul>
+        <li>Hardening de sistemas</li>
+        <li>Firewall (UFW / iptables)</li>
+        <li>Fail2ban</li>
+        <li>HTTPS, HSTS</li>
+      </ul>
+    </section>
+
+    <section id="proyectos">
+      <h2>Laboratorios / Proyectos</h2>
+      <p>Entornos de pruebas enfocados en redes, aislamiento, análisis de superficie de ataque y buenas prácticas.</p>
+    </section>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <p>
+        <a href="https://github.com/tuusuario">GitHub</a><br>
+        <a href="mailto:tu@email.com">tu@email.com</a>
+      </p>
+    </section>
+  </main>
+
+</div>
+
+<footer>
+  © 2026 · HTML plano · Sin JS · Sin trackers
+</footer>
+
+</body>
+</html>

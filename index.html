@@ -49,6 +49,8 @@ nav a {
 
 nav a:hover { color: var(--accent); }
 
+a {color: var(--accent); }
+
 .container {
   max-width: 1000px;
   margin: auto;
@@ -91,7 +93,7 @@ aside a:hover {
   transform: translateX(4px);
 }
 
-main section { padding-top: 4rem;}
+main section { padding-top: 4rem; }
 main #titulo { padding-top: 0;}
 h1 { margin: 0 0 0.5rem 0; font-size: 2.2rem; }
 h2 { font-size: 1.4rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; color: var(--accent); }
@@ -130,6 +132,7 @@ footer {
   <aside>
     <strong>Contenido</strong>
     <a href="#estudios">Estudios</a>
+    <a href="#idiomas">Idiomas</a>
     <a href="#habilidades">Habilidades</a>
     <a href="#sobre-mi">Sobre mí</a>
     <a href="#proyectos">Proyectos</a>
@@ -140,7 +143,7 @@ footer {
   <main>
     <section id="titulo">
       <h1>Javier Bautista Luis</h1>
-      <p>Sistemas · Linux · Seguridad · Infraestructura</p>
+      <p>Redes · Linux · Seguridad · Sistemas</p>
     </section>
 
     <section id="estudios">
@@ -148,20 +151,27 @@ footer {
       <ul>
 	<p style="margin-left: -20px; margin-bottom: -3.5px;">Septiembre 2023 - Junio 2026</p>
         <li><b>Grado en Ingeniería Informática (Rama de ciencias de la computación) - UCM</b></li>
-        <p>Septiembre 2020 - Junio 2022</p>
-        <li>Bachillerato IES Carlos Bousoño</li>
-        <p>Septiembre 2011 - Junio 2022</p>
+        <p style="margin-left: -20px; margin-bottom: -3.5px;">Septiembre 2020 - Junio 2022</p>
+        <li><b>Bachillerato IES Carlos Bousoño</b></li>
+        <p style="margin-left: -20px; margin-bottom: -3.5px;">Septiembre 2011 - Junio 2022</p>
         <li><b>Conservatorio Profesional de Música de Majadahonda</b></li>
       </ul>
     </section>
-
+    <section id="idiomas">
+      <h2>Idiomas</h2>
+      <ul>
+        <li>Español: Nativo</li>
+        <li>Inglés: C1 Speaking,  B2-Writing & Reading</li>
+      </ul>
+    </section>
     <section id="habilidades">
       <h2>Habilidades / Conocimientos</h2>
       <ul>
-        <li>Despliegue de VPS</li>
-        <li>Nginx / Apache</li>
-        <li>Backups y monitoreo</li>
+        <li>Gestión y desarrollo de arquitecturas de red seguras</li>
+        <li>Administración y análisis de Sistemas operativos base linux</li>
+        <li>Control de diferentes lenguajes de programación( C, C++, Bash, Java, python... )</li>
       </ul>
+      <p>Para ver más información sobre mis conocimientos recomiendo consultar algunos de mis <a href="pr">proyectos documentados</a> con sus respectivos archivos en GitHub</p>
     </section>
 
     <section id="sobre-mi">
@@ -182,8 +192,8 @@ footer {
     <section id="contacto">
       <h2>Contacto</h2>
       <p>
-        <a href="https://github.com/tuusuario">GitHub</a><br>
-        <a href="mailto:tu@email.com">tu@email.com</a>
+        <a href="https://github.com/javier-bau">Mi GitHub</a><br>
+        <a href="mailto:javier.bautistaluis@gmail.com">Mi Correo electrónico</a>
       </p>
     </section>
   </main>

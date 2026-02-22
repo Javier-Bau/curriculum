@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Javier Bautista Luis — Sistemas & Seguridad2</title>
-	
+<title>Javier Bautista Luis — Sistemas & Seguridad</title>
+
 <style>
     :root {
       --bg: #0e0e11;
@@ -114,8 +114,9 @@
     .project {
       border: 1px solid var(--border);
       background: var(--bg-soft);
-      padding: 1.5rem;
+      padding: 20px !important;
       margin-bottom: 2rem;
+      padding-top: 0px !important; 
     }
 
     .studies { 
@@ -206,6 +207,10 @@
       fill: #5da9ff;
     }
 
+    b {
+      color: rgba(255,255,255, 0.7);
+    }
+
 </style>
 </head>
 <body>
@@ -224,6 +229,7 @@
     <a href="#idiomas">Idiomas</a>
     <a href="#habilidades">Habilidades</a>
     <a href="#sobre-mi">Sobre mí</a>
+    <a href="#experiencia">Experiencia</a>
     <!--<a href="#proyectos">Proyectos</a>-->
     
     <div class="social-buttons">
@@ -319,22 +325,33 @@
       <p>Apasionado por Linux y por entender el funcionamiento interno de los sistemas, desde el proceso de arranque hasta la ejecución de programas y el comportamiento del software a bajo nivel. Actualmente orientado mi formación hacia el análisis de malware y estudio de amenazas desde una perspectiva técnica y profunda.<br></p>
       <p>En constante aprendizaje, con el objetivo de desarrollar una base sólida para el análisis y la defensa de sistemas.</p>
     </section>
+    
+    <section id="sobre-mi">
+      <h2>Experiencia</h2>
+      
+      <div class="studies">
+        <h3><b style="color: #5da9ff;">Profesor de Clases particulares | Alumnos de Bachillerato</b></h3>
+        <p>Llevo <b style="color: rgba(255,255,255,0.7);">2 años</b> y medio dando clases particulares a alumnos de segundo y primero de bachillerato de <b>Matemáticas, Dibujo Técnico y física</b>; aprendiendo así la importancia de no solo tener conocimientos sino de también tenerlos lo suficientemente interiorizados como para ser capaz de poder transmitirlos</p>
+      </div>
 
-    <!-- <section id="proyectos">
+      <div class="studies">
+        <h3><b style="color: #5da9ff;">Administrador de Sistemas y Desarrollo Freelance</b></h3>
+        <p>Durante <b>2024 y 2025</b> trabajé como freelance desarrollando automatizaciones, sistemas de atención al cliente y administrando infraestructuras en entornos Linux para clientes internacionales.</p>
+        
+        <p>Realicé configuración <b>segura y hardening de servidores, gestión de servicios, cortafuegos</b> y <b>tareas programadas (crontab)</b>, incluyendo <b>análisis de procesos, revisión de logs</b> y <b>resolución de incidencias.</b></p>     
+        
+        <p>Esta experiencia reforzó mis competencias en <b>administración avanzada del tiempo, respuesta ante incidentes</b> y aplicación de <b>buenas prácticas de seguridad</b>, junto con una <b>buena gestión de proyectos.</b></p>
+      </div>
+    </section>
+
+     <section id="proyectos">
       <h2>Laboratorios / Proyectos</h2>
       <div class="project">
-        <h2>Servidor Linux endurecido</h2>
-        <div class="meta">VPS · Linux · Seguridad</div>
+        <h3 style="color: #5da9ff;">Servidor Linux endurecido</h3>
         <p>
           Despliegue y hardening de un servidor Linux expuesto a Internet,
           aplicando buenas prácticas de seguridad.
         </p>
-        <ul>
-          <li>SSH con claves y sin root</li>
-          <li>Firewall restrictivo</li>
-          <li>Fail2ban</li>
-          <li>Actualizaciones de seguridad</li>
-        </ul>
 
         <div class="buttons">
           <a class="btn btn-primary" href="https://github.com/tuusuario/proyecto1" target="_blank">
@@ -344,9 +361,9 @@
             Ver detalles
           </a>
         </div>
-    </div>
+      </div>
 
-    </section>-->
+    </section>
     <section id="contacto">
       <h2>Contacto</h2>
       <div class="social-buttons" style="justify-content: left !important;">

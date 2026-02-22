@@ -90,7 +90,7 @@
       transition: transform 0.2s, color 0.2s;
     }
 
-    aside a:hover {
+    aside a:hover:not(.social-button) {
       color: var(--accent);
       transform: translateX(4px);
     }
@@ -190,15 +190,15 @@
       background-color: #fff;
       box-shadow: 0px 0px 4px #00000027; 
       border: 2px solid #5da9ff;
-      background: transparent;
+      background: var(--bg);
+      
       fill: #5da9ff;
     }
 
     .social-button:hover {
       box-shadow: 0px 0px 6px 3px #00000027;
-      border: 2px solid transparent;
-      background-color: #fff;
       fill: #000;
+      box-shadow: 0px 0px 10px #5da9ff;
     }
 
     .social-buttons svg {
@@ -211,7 +211,7 @@
 <body>
 <nav>
   <a href="index.html">Inicio</a>
-  <a href="proyectos.html">Proyectos</a>
+  <!--<a href="proyectos.html">Proyectos</a>-->
   <a href="#contacto">Contacto</a>
 </nav>
 
@@ -224,7 +224,7 @@
     <a href="#idiomas">Idiomas</a>
     <a href="#habilidades">Habilidades</a>
     <a href="#sobre-mi">Sobre mí</a>
-    <a href="#proyectos">Proyectos</a>
+    <!--<a href="#proyectos">Proyectos</a>-->
     
     <div class="social-buttons">
       <a href="mailto:javier.bautistaluis@gmail.com" class="social-button email">
@@ -248,9 +248,12 @@
 
   <!-- MAIN -->
   <main>
-    <section id="titulo">
-      <h1>Javier Bautista Luis</h1>
-      <p>Estudiante de Ingeniería Informática orientado a Blue Team, SOC y análisis de malware, con especial interés en sistemas y comprensión a bajo nivel.</p>
+    <section id="titulo" style="display: flex; flex-direction: row; gap: 1rem;">
+      <img src="foto.jpeg" style="border-radius: 50%; max-height: 10rem;">
+      <div style="min-height: 10rem; align-items: center;">
+	      <h1>Javier Bautista Luis</h1>
+        <p>Estudiante de Ingeniería Informática orientado a Blue Team, SOC y análisis de malware, con especial interés en sistemas y comprensión a bajo nivel.</p>
+      </div>
     </section>
 
     <section id="estudios">
@@ -307,7 +310,7 @@
           <li style="color: white;">Trabajo y gestión de proyectos en equipo</li>
         </ul>
       </div>
-      <p>Para ver en más detalle y de manera práctica mis conocimientos(principalmente técnicos) recomiendo consultar algunos de mis <a href="pr">proyectos documentados</a> con sus respectivos archivos en GitHub</p>
+      <!-- <p>Para ver en más detalle y de manera práctica mis conocimientos(principalmente técnicos) recomiendo consultar algunos de mis <a href="pr">proyectos documentados</a> con sus respectivos archivos en GitHub</p>-->
     </section>
 
     <section id="sobre-mi">
@@ -317,7 +320,7 @@
       <p>En constante aprendizaje, con el objetivo de desarrollar una base sólida para el análisis y la defensa de sistemas.</p>
     </section>
 
-    <section id="proyectos">
+    <!-- <section id="proyectos">
       <h2>Laboratorios / Proyectos</h2>
       <div class="project">
         <h2>Servidor Linux endurecido</h2>
@@ -343,8 +346,7 @@
         </div>
     </div>
 
-    </section>
-
+    </section>-->
     <section id="contacto">
       <h2>Contacto</h2>
       <div class="social-buttons" style="justify-content: left !important;">
@@ -372,6 +374,7 @@
 
 <footer>
   Desarrollado por Javier Bautista Luis © 2026
+  <p>Página web incompleta | Sección de proyectos actualmente en desarrollo</p>
 </footer>
 
 </body>

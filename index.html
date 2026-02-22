@@ -6,117 +6,206 @@
 <title>Javier Bautista Luis — Sistemas & Seguridad</title>
 
 <style>
-:root {
-  --bg: #0e0e11;
-  --bg-soft: #16161c;
-  --text: #e6e6eb;
-  --muted: #9a9aa3;
-  --accent: #5da9ff;
-  --border: #23232b;
-  --nav-height: 60px; /* Definimos la altura para mayor precisión */
-}
+    :root {
+      --bg: #0e0e11;
+      --bg-soft: #16161c;
+      --text: #e6e6eb;
+      --muted: #9a9aa3;
+      --accent: #5da9ff;
+      --border: #23232b;
+      --nav-height: 60px;
+    }
 
-* { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
-body {
-  margin: 0;
-  font-family: system-ui, -apple-system, sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.6;
-}
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
 
-nav {
-  position: sticky;
-  top: 0;
-  height: var(--nav-height);
-  background: rgba(14, 14, 17, 0.8); /* Efecto traslúcido */
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border);
-  padding: 0 1.5rem;
-  display: flex;
-  align-items: center;
-  z-index: 100;
-}
+    a { color: var(--accent); }
 
-nav a {
-  margin-right: 1.5rem;
-  color: var(--muted);
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.2s;
-}
+    nav {
+      position: sticky;
+      top: 0;
+      height: var(--nav-height);
+      background: rgba(14, 14, 17, 0.8); /* Efecto traslúcido */
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 1.5rem;
+      display: flex;
+      align-items: center;
+      z-index: 100;
+    }
 
-nav a:hover { color: var(--accent); }
+    nav a {
+      margin-right: 1.5rem;
+      color: var(--muted);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
 
-a {color: var(--accent); }
+    nav a:hover { color: var(--accent); }
 
-.container {
-  max-width: 1000px;
-  margin: auto;
-  padding: 2.5rem 1.5rem;
-  display: grid;
-  grid-template-columns: 200px 1fr;
-  gap: 3rem;
-  align-items: start; /* Ayuda a que los hijos no se estiren */
-}
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 2.5rem 1.5rem;
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
 
-aside {
-  position: sticky;
-  top: calc(var(--nav-height) + 3rem); /* Se pega justo debajo del nav */
-  align-self: start;
-  height: fit-content;
-  border-right: 1px solid var(--border);
-  padding-right: 1rem;
-}
+    aside {
+      position: sticky;
+      top: calc(var(--nav-height) + 3rem);
+      align-self: start;
+      height: fit-content;
+      border-right: 1px solid var(--border);
+      padding-right: 1rem;
+    }
 
-aside strong {
-  display: block;
-  margin-bottom: 1rem;
-  text-transform: uppercase;
-  font-size: 0.8rem;
-  letter-spacing: 0.05rem;
-  color: var(--accent);
-}
+    aside strong {
+      display: block;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      letter-spacing: 0.05rem;
+      color: var(--accent);
+    }
 
-aside a {
-  display: block;
-  margin-bottom: 0.8rem;
-  color: var(--muted);
-  text-decoration: none;
-  font-size: 0.9rem;
-  transition: transform 0.2s, color 0.2s;
-}
+    aside a {
+      display: block;
+      margin-bottom: 0.8rem;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: transform 0.2s, color 0.2s;
+    }
 
-aside a:hover {
-  color: var(--accent);
-  transform: translateX(4px);
-}
+    aside a:hover {
+      color: var(--accent);
+      transform: translateX(4px);
+    }
 
-main section { padding-top: 4rem; }
-main #titulo { padding-top: 0;}
-h1 { margin: 0 0 0.5rem 0; font-size: 2.2rem; }
-h2 { font-size: 1.4rem; margin-bottom: 1.5rem; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; color: var(--accent); }
-p { color: var(--muted); margin: 0.8rem 0; }
-ul { padding-left: 1.2rem; }
-li { margin-bottom: 0.6rem; color: var(--muted); }
+    main section { padding-top: 4rem; }
+    main #titulo { padding-top: 0; }
 
-footer {
-  max-width: 1000px;
-  margin: 5rem auto 2rem;
-  padding: 2rem 1.5rem;
-  border-top: 1px solid var(--border);
-  font-size: 0.85rem;
-  color: var(--muted);
-  text-align: center;
-}
+    h1 { margin: 0 0 0.5rem 0; font-size: 2.2rem; }
+    h2 {
+      font-size: 1.4rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.5rem;
+      color: var(--accent);
+    }
 
-@media (max-width: 800px) {
-  .container { grid-template-columns: 1fr; gap: 1rem; }
-  aside {
-    display: none;
-  }
-}
+    p { color: var(--muted); margin: 0.8rem 0; }
+    ul { padding-left: 1.2rem; }
+    li { margin-bottom: 0.6rem; color: var(--muted); }
+
+    .project {
+      border: 1px solid var(--border);
+      background: var(--bg-soft);
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .studies { 
+      padding-bottom: 0 !important; 
+      padding: 10px 15px !important;
+      border: 1px solid var(--border);
+      background: var(--bg-soft);
+      margin-bottom: 1rem;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: right;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+      margin-top: 1.2rem;
+    }
+
+    .btn {
+      padding: 0.45rem 0.9rem;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    .btn:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: rgba(0, 0, 0, 0.25);
+    }
+
+    .btn-primary {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .btn-primary:hover { background: rgba(0, 0, 0, 0.25); }
+
+    footer {
+      max-width: 1000px;
+      margin: 5rem auto 2rem;
+      padding: 2rem 1.5rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.85rem;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    @media (max-width: 800px) {
+      .container { grid-template-columns: 1fr; gap: 1rem; }
+      aside { display: none; }
+    }
+    
+    /* From Uiverse.io by aadium */ 
+    .social-buttons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 0;
+    }
+
+    .social-button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin: 0 5px;
+      background-color: #fff;
+      box-shadow: 0px 0px 4px #00000027; 
+      border: 2px solid #5da9ff;
+      background: transparent;
+      fill: #5da9ff;
+    }
+
+    .social-button:hover {
+      box-shadow: 0px 0px 6px 3px #00000027;
+      border: 2px solid transparent;
+      background-color: #fff;
+      fill: #000;
+    }
+
+    .social-buttons svg {
+      height: 20px;
+      fill: #5da9ff;
+    }
+
 </style>
 </head>
 <body>
@@ -136,72 +225,153 @@ footer {
     <a href="#habilidades">Habilidades</a>
     <a href="#sobre-mi">Sobre mí</a>
     <a href="#proyectos">Proyectos</a>
-    <a href="#contacto">Contactos</a>
+    
+    <div class="social-buttons">
+      <a href="mailto:javier.bautistaluis@gmail.com" class="social-button email">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 7L10.94 11.3375C11.5885 11.7428 12.4115 11.7428 13.06 11.3375L20 7M5 18H19C20.1046 18 21 17.1046 21 16V8C21 6.89543 20.1046 6 19 6H5C3.89543 6 3 6.89543 3 8V16C3 17.1046 3.89543 18 5 18Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+      </a>
+      <a href="https://github.com/javier-bau" class="social-button github">
+        <svg class="cf-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="-2.5 0 19 19"><path d="M9.464 17.178a4.506 4.506 0 0 1-2.013.317 4.29 4.29 0 0 1-2.007-.317.746.746 0 0 1-.277-.587c0-.22-.008-.798-.012-1.567-2.564.557-3.105-1.236-3.105-1.236a2.44 2.44 0 0 0-1.024-1.348c-.836-.572.063-.56.063-.56a1.937 1.937 0 0 1 1.412.95 1.962 1.962 0 0 0 2.682.765 1.971 1.971 0 0 1 .586-1.233c-2.046-.232-4.198-1.023-4.198-4.554a3.566 3.566 0 0 1 .948-2.474 3.313 3.313 0 0 1 .091-2.438s.773-.248 2.534.945a8.727 8.727 0 0 1 4.615 0c1.76-1.193 2.532-.945 2.532-.945a3.31 3.31 0 0 1 .092 2.438 3.562 3.562 0 0 1 .947 2.474c0 3.54-2.155 4.32-4.208 4.548a2.195 2.195 0 0 1 .625 1.706c0 1.232-.011 2.227-.011 2.529a.694.694 0 0 1-.272.587z"></path></svg>
+      </a>
+      <a href="https://www.linkedin.com/in/javier-bautista-luis-802675330" class="social-button linkedin">
+        <svg viewBox="0 -2 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <g id="Icons" stroke="none" stroke-width="1">
+            <g transform="translate(-702.000000, -265.000000)">
+                <path d="M746,305 L736.2754,305 L736.2754,290.9384 C736.2754,287.257796 734.754233,284.74515 731.409219,284.74515 C728.850659,284.74515 727.427799,286.440738 726.765522,288.074854 C726.517168,288.661395 726.555974,289.478453 726.555974,290.295511 L726.555974,305 L716.921919,305 C716.921919,305 717.046096,280.091247 716.921919,277.827047 L726.555974,277.827047 L726.555974,282.091631 C727.125118,280.226996 730.203669,277.565794 735.116416,277.565794 C741.21143,277.565794 746,281.474355 746,289.890824 L746,305 L746,305 Z M707.17921,274.428187 L707.117121,274.428187 C704.0127,274.428187 702,272.350964 702,269.717936 C702,267.033681 704.072201,265 707.238711,265 C710.402634,265 712.348071,267.028559 712.41016,269.710252 C712.41016,272.34328 710.402634,274.428187 707.17921,274.428187 L707.17921,274.428187 L707.17921,274.428187 Z M703.109831,277.827047 L711.685795,277.827047 L711.685795,305 L703.109831,305 L703.109831,277.827047 L703.109831,277.827047 Z" id="LinkedIn">
+                </path>
+            </g>
+        </g>
+        </svg>
+      </a>
+    </div>
   </aside>
 
   <!-- MAIN -->
   <main>
     <section id="titulo">
       <h1>Javier Bautista Luis</h1>
-      <p>Redes · Linux · Seguridad · Sistemas</p>
+      <p>Estudiante de Ingeniería Informática orientado a Blue Team, SOC y análisis de malware, con especial interés en sistemas y comprensión a bajo nivel.</p>
     </section>
 
     <section id="estudios">
-      <h2>Estudios</h2>
-      <ul>
-	<p style="margin-left: -20px; margin-bottom: -3.5px;">Septiembre 2023 - Junio 2026</p>
-        <li><b>Grado en Ingeniería Informática (Rama de ciencias de la computación) - UCM</b></li>
-        <p style="margin-left: -20px; margin-bottom: -3.5px;">Septiembre 2020 - Junio 2022</p>
-        <li><b>Bachillerato IES Carlos Bousoño</b></li>
-        <p style="margin-left: -20px; margin-bottom: -3.5px;">Septiembre 2011 - Junio 2022</p>
-        <li><b>Conservatorio Profesional de Música de Majadahonda</b></li>
-      </ul>
+      <h2>Estudios / Certificaciones</h2>
+      <div class="studies">
+        <div>Septiembre 2023 - Junio 2026</div>
+        <p style="color: white;"><b>Grado en Ingeniería Informática (Rama de ciencias de la computación) - Universidad Complutense de Madrid</b></p>
+      </div>
+      <div class="studies">
+        <div>Septiembre 2011 - Junio 2022</div>
+        <p style="color: white;"><b>Títulado en Enseñanzas Profesionales de Música - Conservatorio Profesional de Música de Majadahonda</b></p>
+      </div>
+      <div class="studies">
+        <div>2026 - Actualidad</div>
+        <p style="color: white;">
+          <b>Próximos objetivos de aprendizaje:</b>
+          <ul>
+            <li style="color: white !important;">Continuar formación avanzada en análisis de malware(Linux y Windows)</li>
+            <li style="color: white !important;">Participación en CTFs y laboratorios de seguridad(THM y HTB)</li>
+            <li style="color: white !important;">Certificaciones de ciberseguridad</li>
+            <li style="color: white !important;">Desarrollo de habilidades blandas aplicadas a gestión de incidentes y trabajo en equipo</li>
+          </ul>
+        </p>
+      </div>
     </section>
     <section id="idiomas">
       <h2>Idiomas</h2>
-      <ul>
-        <li>Español: Nativo</li>
-        <li>Inglés: C1 Speaking,  B2-Writing & Reading</li>
-      </ul>
+      <div style="display: flex; flex-direction: row; gap: 10px;">
+        <div class="studies" style="width:50%; padding: 15px !important; text-align: center;"> 
+          <p><b style="color: #5da9ff;">Español:</b> Nativo</p>
+        </div>
+        <div class="studies" style="width:50%; padding: 15px !important;  text-align: center;"> 
+          <p><b style="color: #5da9ff;">Inglés:</b> C1 level</p>
+          <p>(Certification in progress)</p>
+        </div>
+      </div>
     </section>
     <section id="habilidades">
       <h2>Habilidades / Conocimientos</h2>
-      <ul>
-        <li>Gestión y desarrollo de arquitecturas de red seguras</li>
-        <li>Administración y análisis de Sistemas operativos base linux</li>
-        <li>Control de diferentes lenguajes de programación( C, C++, Bash, Java, python... )</li>
-      </ul>
-      <p>Para ver más información sobre mis conocimientos recomiendo consultar algunos de mis <a href="pr">proyectos documentados</a> con sus respectivos archivos en GitHub</p>
+      <div class="studies">
+        <p><b style="color: #5da9ff;">Habilidades técnicas</b></p>
+        <ul>
+          <li style="color: white;">Diseño y fortalecimiento (hardening) de infraestructuras y arquitecturas de red seguras</li>  
+          <li style="color: white;">Análisis interno de sistemas Linux: formato ELF, linking dinámico, gestión de memoria, procesos y análisis básico de malware</li>
+          <li style="color: white;">Desarrollo en C/C++ y scripting en Bash/Python para automatización y análisis de seguridad</li>
+        </ul>
+      </div>
+      <div class="studies">
+        <p><b style="color: #5da9ff;">Habilidades blandas</b></p>
+        <ul>
+          <li style="color: white;">Pensamiento analítico, crítico y estructurado</li>
+          <li style="color: white;">Gestión de incidentes / problemas bajo presión</li>
+          <li style="color: white;">Aprendizaje y formación continua</li>
+          <li style="color: white;">Trabajo y gestión de proyectos en equipo</li>
+        </ul>
+      </div>
+      <p>Para ver en más detalle y de manera práctica mis conocimientos(principalmente técnicos) recomiendo consultar algunos de mis <a href="pr">proyectos documentados</a> con sus respectivos archivos en GitHub</p>
     </section>
 
     <section id="sobre-mi">
       <h2>Sobre mí</h2>
-      <ul>
-        <li>Hardening de sistemas</li>
-        <li>Firewall (UFW / iptables)</li>
-        <li>Fail2ban</li>
-        <li>HTTPS, HSTS</li>
-      </ul>
+      <p>Estudiante de Ingeniería Informática en la Universidad Complutense de Madrid con interés en la ciberseguridad defensiva y el análisis técnico de sistemas.<br></p>
+      <p>Apasionado por Linux y por entender el funcionamiento interno de los sistemas, desde el proceso de arranque hasta la ejecución de programas y el comportamiento del software a bajo nivel. Actualmente orientado mi formación hacia el análisis de malware y estudio de amenazas desde una perspectiva técnica y profunda.<br></p>
+      <p>En constante aprendizaje, con el objetivo de desarrollar una base sólida para el análisis y la defensa de sistemas.</p>
     </section>
 
     <section id="proyectos">
       <h2>Laboratorios / Proyectos</h2>
-      <p>Entornos de pruebas enfocados en redes, aislamiento, análisis de superficie de ataque y buenas prácticas.</p>
+      <div class="project">
+        <h2>Servidor Linux endurecido</h2>
+        <div class="meta">VPS · Linux · Seguridad</div>
+        <p>
+          Despliegue y hardening de un servidor Linux expuesto a Internet,
+          aplicando buenas prácticas de seguridad.
+        </p>
+        <ul>
+          <li>SSH con claves y sin root</li>
+          <li>Firewall restrictivo</li>
+          <li>Fail2ban</li>
+          <li>Actualizaciones de seguridad</li>
+        </ul>
+
+        <div class="buttons">
+          <a class="btn btn-primary" href="https://github.com/tuusuario/proyecto1" target="_blank">
+            GitHub
+          </a>
+          <a class="btn" href="/proyectos/servidor-linux.html">
+            Ver detalles
+          </a>
+        </div>
+    </div>
+
     </section>
 
     <section id="contacto">
       <h2>Contacto</h2>
-      <p>
-        <a href="https://github.com/javier-bau">Mi GitHub</a><br>
-        <a href="mailto:javier.bautistaluis@gmail.com">Mi Correo electrónico</a>
-      </p>
+      <div class="social-buttons" style="justify-content: left !important;">
+        <a href="mailto:javier.bautistaluis@gmail.com" class="social-button email">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 7L10.94 11.3375C11.5885 11.7428 12.4115 11.7428 13.06 11.3375L20 7M5 18H19C20.1046 18 21 17.1046 21 16V8C21 6.89543 20.1046 6 19 6H5C3.89543 6 3 6.89543 3 8V16C3 17.1046 3.89543 18 5 18Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        </a>
+        <a href="https://github.com/javier-bau" class="social-button github">
+          <svg class="cf-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="-2.5 0 19 19"><path d="M9.464 17.178a4.506 4.506 0 0 1-2.013.317 4.29 4.29 0 0 1-2.007-.317.746.746 0 0 1-.277-.587c0-.22-.008-.798-.012-1.567-2.564.557-3.105-1.236-3.105-1.236a2.44 2.44 0 0 0-1.024-1.348c-.836-.572.063-.56.063-.56a1.937 1.937 0 0 1 1.412.95 1.962 1.962 0 0 0 2.682.765 1.971 1.971 0 0 1 .586-1.233c-2.046-.232-4.198-1.023-4.198-4.554a3.566 3.566 0 0 1 .948-2.474 3.313 3.313 0 0 1 .091-2.438s.773-.248 2.534.945a8.727 8.727 0 0 1 4.615 0c1.76-1.193 2.532-.945 2.532-.945a3.31 3.31 0 0 1 .092 2.438 3.562 3.562 0 0 1 .947 2.474c0 3.54-2.155 4.32-4.208 4.548a2.195 2.195 0 0 1 .625 1.706c0 1.232-.011 2.227-.011 2.529a.694.694 0 0 1-.272.587z"></path></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/javier-bautista-luis-802675330" class="social-button linkedin">
+          <svg viewBox="0 -2 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <g id="Icons" stroke="none" stroke-width="1">
+              <g transform="translate(-702.000000, -265.000000)">
+                  <path d="M746,305 L736.2754,305 L736.2754,290.9384 C736.2754,287.257796 734.754233,284.74515 731.409219,284.74515 C728.850659,284.74515 727.427799,286.440738 726.765522,288.074854 C726.517168,288.661395 726.555974,289.478453 726.555974,290.295511 L726.555974,305 L716.921919,305 C716.921919,305 717.046096,280.091247 716.921919,277.827047 L726.555974,277.827047 L726.555974,282.091631 C727.125118,280.226996 730.203669,277.565794 735.116416,277.565794 C741.21143,277.565794 746,281.474355 746,289.890824 L746,305 L746,305 Z M707.17921,274.428187 L707.117121,274.428187 C704.0127,274.428187 702,272.350964 702,269.717936 C702,267.033681 704.072201,265 707.238711,265 C710.402634,265 712.348071,267.028559 712.41016,269.710252 C712.41016,272.34328 710.402634,274.428187 707.17921,274.428187 L707.17921,274.428187 L707.17921,274.428187 Z M703.109831,277.827047 L711.685795,277.827047 L711.685795,305 L703.109831,305 L703.109831,277.827047 L703.109831,277.827047 Z" id="LinkedIn">
+                  </path>
+              </g>
+          </g>
+          </svg>
+        </a>
+      </div>
     </section>
   </main>
 
 </div>
 
 <footer>
-  © 2026 · HTML plano · Sin JS · Sin trackers
+  Desarrollado por Javier Bautista Luis © 2026
 </footer>
 
 </body>
